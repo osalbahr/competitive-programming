@@ -13,11 +13,8 @@ int main()
 
     vector<int> v(n + 1);
 
-    int total = 0;
-    for (int i = 0; i < n; i++) {
-        total += s[i] - 'a' + 1;
-        v[i + 1] = total;
-    }
+    for (int i = 0; i < n; i++)
+        v[i + 1] = v[i] + s[i] - 'a' + 1;
 
     while (q--) {
         int l, r;

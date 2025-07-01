@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 
 using namespace std;
 
@@ -10,15 +11,18 @@ int main()
     string s;
     cin >> s;
 
+    vector<int> v(n + 1);
+
+    int total = 0;
+    for (int i = 0; i < n; i++) {
+        total += s[i] - 'a' + 1;
+        v[i + 1] = total;
+    }
+
     while (q--) {
         int l, r;
         cin >> l >> r;
 
-        int total = 0;
-        for (int i = l - 1; i <= r - 1; i++) {
-            total += s[i] - 'a' + 1;
-        }
-
-        cout << total << endl;
+        cout << v[r] - v[l - 1] << endl;
     }
 }

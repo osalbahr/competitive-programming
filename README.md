@@ -1,6 +1,8 @@
-# Learn Programming
+# Competitive Programming
 
-Repo to (re)learn programming. PR's to the documentation are welcome.
+Repo for competitive programming
+
+Also:
 
 - Ruby.md: Ruby documentation as I learn it
 

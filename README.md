@@ -1,6 +1,6 @@
 # Competitive Programming
 
-Repo for competitive programming
+Repo for competitive programming.
 
 Also:
 

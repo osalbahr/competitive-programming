@@ -1,12 +1,9 @@
 #include <iostream>
+#include <map>
 
 using namespace std;
 
-int main()
-{
-    string s;
-    getline(cin, s);
-
+int repetitions(string s) { 
     int maximum = 0;
     for (size_t i = 0; i < s.size(); i++) {
         int current = 1;
@@ -23,5 +20,5 @@ int main()
         }
     }
 
-    cout << maximum << endl;
+    return maximum;
 }

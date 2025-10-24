@@ -1,6 +1,12 @@
 #include <iostream>
 using namespace std;
 
-float raduis(float circumference) { 
-    return circumference / 3.14 / 2;
+string numbers_range(int number) { 
+    string ans = "0";
+    for (int i = 1; i <= number; i++) {
+        ans += " ";
+        ans += to_string(i);
+    }
+
+    return ans;
 }

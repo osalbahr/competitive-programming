@@ -60,3 +60,7 @@ build-iPhoneSimulator/
 
 # macOS files
 .DS_Store
+
+# Input/output files
+*.in
+*.out

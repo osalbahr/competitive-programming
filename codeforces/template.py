@@ -7,5 +7,9 @@ def solve():
 
 def main():
     t = int(input())
-    for i in range(t):
+    for _ in range(t):
         solve()
+
+
+if __name__ == "__main__":
+    main()

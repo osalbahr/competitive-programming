@@ -7,7 +7,7 @@ if (String.IsNullOrEmpty(line))
     Environment.Exit(1);
 }
 
-int firstNumber;
+var firstNumber = 1234567891012345678910;
 var success = int.TryParse(line, out firstNumber);
 if (!success)
 {

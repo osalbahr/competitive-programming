@@ -23,6 +23,8 @@ def is_valid(n_str):
         slices = set()
         for j in range(0, len(n_str), i):
             slices.add(n_str[j : j + i])
+            if len(slices) > 1:
+                break
 
         if len(slices) == 1:
             return False

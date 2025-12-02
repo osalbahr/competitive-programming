@@ -6,7 +6,11 @@ using namespace std;
 
 bool isValid(int calibration, const vector<int>& numbers)
 {
-    return true;
+    int val = numbers[0];
+    for (int i = 0; i < numbers.size(); i++) {
+        val += numbers[i];
+        val *= numbers[i];
+    }
 }
 
 int main()

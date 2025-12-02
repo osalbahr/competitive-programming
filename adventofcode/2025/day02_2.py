@@ -2,6 +2,7 @@
 
 import sys
 
+
 def main():
     total = 0
     for line in sys.stdin:
@@ -13,19 +14,21 @@ def main():
 
     print(total)
 
+
 def is_valid(n_str):
     for i in range(1, len(n_str) // 2 + 1):
         if len(n_str) % i != 0:
             continue
-        
+
         slices = set()
         for j in range(0, len(n_str), i):
             slices.add(n_str[j : j + i])
-        
+
         if len(slices) == 1:
             return False
 
     return True
+
 
 if __name__ == "__main__":
     main()

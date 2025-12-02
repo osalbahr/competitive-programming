@@ -15,7 +15,7 @@ for line in sys.stdin:
         position -= count
         while position < 0:
             position += 100
-    
+
     if position == 0:
         total_zero += 1
 

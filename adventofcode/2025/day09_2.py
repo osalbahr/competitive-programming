@@ -65,10 +65,15 @@ def is_valid_rectangle(corner1, corner2):
 
     return True
 
+worker_id = int(sys.argv[1])
 max_area = -1
 for i in range(len(grid_array)):
+    if i % 10 != worker_id:
+        continue
+    
+    print(f"Worker {worker_id}: {i} out of {len(grid_array)}")
+
     for j in range(i + 1, len(grid_array)):
-        print(i, j, "of", len(grid_array))
         corner1 = grid_array[i]
         corner2 = grid_array[j]
 
@@ -79,3 +84,5 @@ for i in range(len(grid_array)):
             max_area = max(max_area, d_row * d_col)
 
 print(max_area)
+with open("out", "a") as file:
+    file.write(f"{max_area} by {sys.argv[1]}\n")

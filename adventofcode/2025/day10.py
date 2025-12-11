@@ -15,7 +15,6 @@ def main():
                 buttons[i] = (i,)
 
         min_presses = get_min_presses(lights, buttons)
-        print(min_presses)
         total += min_presses
 
     print(total)
@@ -25,7 +24,7 @@ def get_min_presses(lights, buttons):
     h = [(0, lights)]
     while True:
         count, current_lights = heappop(h)
-        if "." not in current_lights:
+        if "#" not in current_lights:
             return count
 
         for button in buttons:

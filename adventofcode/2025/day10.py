@@ -12,7 +12,7 @@ def main():
         buttons = [eval(button) for button in buttons]
         for i in range(len(buttons)):
             if type(buttons[i]) is int:
-                buttons[i] = (i,)
+                buttons[i] = (buttons[i],)
 
         min_presses = get_min_presses(lights, buttons)
         total += min_presses

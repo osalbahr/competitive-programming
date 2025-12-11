@@ -22,13 +22,17 @@ def main():
 
 def get_min_presses(lights, buttons):
     h = [(0, lights)]
+    seen = set(lights)
     while True:
         count, current_lights = heappop(h)
         if "#" not in current_lights:
             return count
 
         for button in buttons:
-            heappush(h, (count + 1, press(current_lights, button)))
+            new_lights = press(current_lights, button)
+            if new_lights not in seen:
+                heappush(h, (count + 1, new_lights))
+                seen.add(new_lights)
 
 
 def press(lights, button):

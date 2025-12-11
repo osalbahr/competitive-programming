@@ -11,11 +11,9 @@ for line in sys.stdin:
     edge_list[start] = next_list
 
 node_to_count = {}
+node_to_count["out"] = 1
 
 def get_path_count(node):
-    if node == "out":
-        return 1
-
     if node  not in node_to_count:
         node_to_count[node] = sum(get_path_count(next_node) for next_node in edge_list[node])
     

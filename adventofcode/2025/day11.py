@@ -16,7 +16,7 @@ node_to_count["out"] = 1
 def get_path_count(node):
     if node  not in node_to_count:
         node_to_count[node] = sum(get_path_count(next_node) for next_node in edge_list[node])
-    
+
     return node_to_count[node]
 
 print(get_path_count("you"))

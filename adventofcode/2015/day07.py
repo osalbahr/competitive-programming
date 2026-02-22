@@ -33,15 +33,14 @@ while len(lines) > len(is_evaluated):
                     table[tokens[-1]] = convert(tokens[0]) | convert(tokens[2])
                 elif tokens[1] == "LSHIFT":
                     table[tokens[-1]] = convert(tokens[0]) << convert(tokens[2])
-                elif tokens[1] == "LSHIFT":
+                elif tokens[1] == "RSHIFT":
                     table[tokens[-1]] = convert(tokens[0]) >> convert(tokens[2])
             elif len(tokens) == 4:
                 table[tokens[-1]] = (~ convert(tokens[1])) & 0xFFFF  
 
             is_evaluated.add(i)
-            print(len(is_evaluated))
             break
         except KeyError:
             continue
 
-print(table)
+print(table["a"])
